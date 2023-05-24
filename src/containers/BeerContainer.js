@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import Beer from "../components/Beer";
 import BeerList from "../components/BeerList";
+import BeverageCartList from "../components/BeverageCartList";
+
 
 const BeerContainer = () => {
 
 const [beers, setBeers] = useState([]);
+
+// [A21]
+const [beverageCartList, setBeverageCartList] = useState([]);   
 
 // useEffect to call API data 
 
@@ -30,8 +35,11 @@ useEffect(() => {
     
     return(
         <>
-        <p>Testing Testing</p>
-        <BeerList beers={beers}/>
+        <h1>Beer Shop</h1>
+        <div>
+            <BeerList beers={beers}/>
+            <BeverageCartList beers={beverageCartList} />
+        </div>
         </>
     );
 }

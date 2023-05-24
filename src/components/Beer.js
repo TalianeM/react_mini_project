@@ -1,12 +1,13 @@
 
 const Beer = ({beer}) => {
 
+
+    // beer name, id, description, image
     return(
         <>
-<p> Hello from Beer! </p>
-
+        <li>{beer.name}</li>
         </>
-    )
+    );
 
 }
 
