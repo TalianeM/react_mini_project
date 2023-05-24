@@ -1,6 +1,8 @@
 import Beer from "./Beer";
 
-const BeerList = () => {
+const BeerList = ({beers}) => { 
+
+    const beerComponents = beers.map((beer) => <Beer />) 
 
 
     // Mapping over beers array and for each beer inside the array
@@ -14,8 +16,9 @@ const BeerList = () => {
     return (
         <>
         <h3>List of Beers</h3>
-        <Beer/>
-        <hr />
+        <ul>
+       {beerComponents}
+        </ul>
         </>
     )
 }

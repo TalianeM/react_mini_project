@@ -2,7 +2,10 @@
 const Beer = ({beer}) => {
 
     return(
-        <p> Hello from Beer! </p>
+        <>
+<p> Hello from Beer! </p>
+
+        </>
     )
 
 }
