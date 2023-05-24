@@ -1,3 +1,4 @@
+import Beer from "../components/Beer";
 import BeerList from "../components/BeerList";
 
 const BeerContainer = () => {
