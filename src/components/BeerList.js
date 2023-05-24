@@ -16,7 +16,6 @@ const BeerList = () => {
         <h3>List of Beers</h3>
         <Beer/>
         <hr />
-        {/* {beerComponents} */}
         </>
     )
 }

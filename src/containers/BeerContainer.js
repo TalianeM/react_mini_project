@@ -1,22 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Beer from "../components/Beer";
 import BeerList from "../components/BeerList";
 
 const BeerContainer = () => {
 
+const [beers, setBeers] = useState([]);
+
 // useEffect to call API data 
 
-useEffect(  () => {
-    fetch("https://api.punkapi.com/v2/beers") 
-    .then((response) => response.json)
-    .then((jsonData) => console.log(jsonData))
-}, [])
+const fetchBeers = async () => {
+    const response = await fetch("https://api.punkapi.com/v2/beers");
+    const jsonData = await response.json();
+    setBeers(jsonData);
+}
+
+useEffect(() => {
+    fetch("https://api.punkapi.com/v2/beers")
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        setBeers(data);
+    })
+},[])
+
+
+
 
     
     return(
         <>
         <p>Testing Testing</p>
-        <BeerList/>
+        <BeerList beers={beers}/>
         </>
     );
 }
