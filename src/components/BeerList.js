@@ -2,16 +2,8 @@ import Beer from "./Beer";
 
 const BeerList = ({beers}) => { 
 
-    const beerComponents = beers.map((beer) => <Beer />) 
+    const beerComponents = beers.map((beer) => <Beer beer={beer}  />) 
 
-
-    // Mapping over beers array and for each beer inside the array
-    // return 
-    // const beerComponents = beers.map((beer) => {
-    //     return <Beer
-    //          beer={beer} 
-    //         key={beer.id}/>
-    // })
 
     return (
         <>
