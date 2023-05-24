@@ -36,7 +36,7 @@ useEffect(() => {
     return(
         <>
         <h1>Beer Shop</h1>
-        <div>
+        <div class="beer-wrapper">
             <BeerList beers={beers}/>
             <BeverageCartList beers={beverageCartList} />
         </div>
